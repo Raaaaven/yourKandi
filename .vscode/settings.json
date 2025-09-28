@@ -1,3 +1,5 @@
 {
-    "livePreview.defaultPreviewPath": "/portfolio/index.html"
+    "livePreview.defaultPreviewPath": "/portfolio/index.html",
+    "liveServer.settings.fullReload": true,
+    "files.autoSave": "afterDelay"
 }
