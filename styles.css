@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(248, 235, 216);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-family: 'Alan Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #333;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+ul a {
+  text-decoration: none;
+  color: #A94649;
+  transition: color 0.3s;
+  font-family: "Luckiest Guy", cursive;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+ul li {
+  list-style: none;
+}
+
+.logo {
+  color: #b433bb;
+  font-family: "Zain", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: 4px;
+  text-decoration: none;
+  transition: color 0.3s;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.humburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.humburger-menu .menu {
+  position: fixed;        
+  top: 0;
+  left: 0;
+  width: 100vw;           
+  height: 100vh;      
+  background-color: rgba(252, 205, 242, 0.717); 
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;    
+}
+.menu.active {
+  display: flex; 
+}
+.menu ul {
+  flex-direction: column;
+  gap: 20px;
+}
+.menu ul a {
+  font-size: 24px;
+}
+.menu ul li {
+  list-style: none;
+}
+
+
+.hero-bg {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.cd-nav-trigger {
+  position: fixed;
+  z-index: 3;
+  left: 5%;
+  top: 20px;
+  height: 54px;
+  width: 54px;
+  background-color: #f8adf6;
+  border-radius: 50%;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  transition: transform 0.5s;
+}
+
+.cd-nav-trigger .cd-nav-icon {
+  /* icon created in CSS */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 22px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.cd-nav-trigger .cd-nav-icon::before,
+.cd-nav-trigger .cd-nav-icon:after {
+  /* upper and lower lines of the menu icon */
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.5s, width 0.5s, top 0.3s;
+  -moz-transition: -moz-transform 0.5s, width 0.5s, top 0.3s;
+  transition: transform 0.5s, width 0.5s, top 0.3s;
+}
+
+.cd-nav-trigger .cd-nav-icon::before {
+  -webkit-transform-origin: right top;
+  -moz-transform-origin: right top;
+  -ms-transform-origin: right top;
+  -o-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: translateY(-6px);
+  -moz-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  -o-transform: translateY(-6px);
+  transform: translateY(-6px);
+}
+
+.cd-nav-trigger .cd-nav-icon::after {
+  -webkit-transform-origin: right bottom;
+  -moz-transform-origin: right bottom;
+  -ms-transform-origin: right bottom;
+  -o-transform-origin: right bottom;
+  transform-origin: right bottom;
+  -webkit-transform: translateY(6px);
+  -moz-transform: translateY(6px);
+  -ms-transform: translateY(6px);
+  -o-transform: translateY(6px);
+  transform: translateY(6px);
+}
+
+.no-touch .cd-nav-trigger:hover .cd-nav-icon::after {
+  top: 2px;
+}
+
+.no-touch .cd-nav-trigger:hover .cd-nav-icon::before {
+  top: -2px;
+}
+
+.cd-nav-trigger svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cd-nav-trigger circle {
+  /* circle border animation */
+  stroke: #fff; /* Changed to white */
+  -webkit-transition: stroke-dashoffset 0.4s 0s;
+  -moz-transition: stroke-dashoffset 0.4s 0s;
+  transition: stroke-dashoffset 0.4s 0s;
+}
+
+.cd-nav-trigger.open {
+  /* rotate trigger when navigation becomes visible */
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.cd-nav-trigger.open .cd-nav-icon::after,
+.cd-nav-trigger.open .cd-nav-icon::before {
+  /* animate arrow --> from hamburger to arrow */
+  width: 50%;
+  -webkit-transition: -webkit-transform 0.5s, width 0.5s;
+  -moz-transition: -moz-transform 0.5s, width 0.5s;
+  transition: transform 0.5s, width 0.5s;
+}
+
+.cd-nav-trigger.open .cd-nav-icon::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.cd-nav-trigger.open .cd-nav-icon::after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.no-touch .cd-nav-trigger.open:hover .cd-nav-icon::after,
+.no-touch .cd-nav-trigger.open:hover .cd-nav-icon::before {
+  top: 0;
+}
+
+.cd-nav-trigger.open circle {
+  stroke-dashoffset: 0;
+  -webkit-transition: stroke-dashoffset 0.4s 0.3s;
+  -moz-transition: stroke-dashoffset 0.4s 0.3s;
+  transition: stroke-dashoffset 0.4s 0.3s;
+}
+@media (max-width: 768px) {
+  .humburger-menu {
+    display: block;
+  }
+  nav  {
+    display: none;
+  }
+  
+}
