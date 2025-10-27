@@ -33,8 +33,8 @@ nav {
 
 ul {
   display: flex;
-  gap: 30px;
-  align-items: center;
+  gap: 50px;
+  text-align: Justify;
 }
 
 ul a {
@@ -43,9 +43,11 @@ ul a {
   transition: color 0.3s;
   font-family: "Luckiest Guy", cursive;
   font-optical-sizing: auto;
-  font-weight: 800;
-  letter-spacing: 2px;
+  font-weight: 100;
+  letter-spacing: 4px;
   text-transform: uppercase;
+  text-align: justify;
+  font-size: 11px;
 }
 
 ul li {
@@ -53,14 +55,14 @@ ul li {
 }
 
 .logo {
-  color: #b433bb;
+  color: #d05aad;
   font-family: "Zain", sans-serif;
   font-weight: 800;
-  font-size: 24px;
+  font-size: 23px;
   letter-spacing: 4px;
   text-decoration: none;
   transition: color 0.3s;
-  letter-spacing: 2px;
+  letter-spacing: 7px;
   text-transform: uppercase;
 }
 
@@ -68,40 +70,39 @@ ul li {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  z-index: 999;
 }
+
 .humburger-menu .menu {
-  position: fixed;        
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;           
-  height: 100vh;      
-  background-color: rgba(252, 205, 242, 0.717); 
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(252, 205, 242, 0.717);
   display: none;
   justify-content: center;
   align-items: center;
-  z-index: 2;    
+  z-index: 2;
 }
+
 .menu.active {
-  display: flex; 
+  display: flex;
 }
+
 .menu ul {
   flex-direction: column;
   gap: 20px;
 }
+
 .menu ul a {
   font-size: 24px;
 }
+
 .menu ul li {
   list-style: none;
 }
 
-
-.hero-bg {
-  width: 100%;
-  height: 90vh;
-  object-fit: cover;
-  object-position: 50% 50%;
-}
 .cd-nav-trigger {
   position: fixed;
   z-index: 3;
@@ -202,7 +203,8 @@ ul li {
 
 .cd-nav-trigger circle {
   /* circle border animation */
-  stroke: #fff; /* Changed to white */
+  stroke: #fff;
+  /* Changed to white */
   -webkit-transition: stroke-dashoffset 0.4s 0s;
   -moz-transition: stroke-dashoffset 0.4s 0s;
   transition: stroke-dashoffset 0.4s 0s;
@@ -253,12 +255,287 @@ ul li {
   -moz-transition: stroke-dashoffset 0.4s 0.3s;
   transition: stroke-dashoffset 0.4s 0.3s;
 }
+
+main {
+  width: 100%;
+  height: 90vh;
+  background: url('hero-bg-big.avif') no-repeat center center/cover;
+  margin-top: 0px;
+}
+
+.hero-content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #333;
+}
+
+.firstrow,
+.secondrow {
+  display: flex;
+  justify-content: center;
+  gap: 35%;
+}
+
+.firstrow {
+  margin-bottom: -50px;
+}
+
+.secondrow {
+  margin-top: -80px;
+}
+
+.first1 {
+  width: 120px;
+  height: auto;
+  transition: transform 0.1s;
+}
+
+.first2 {
+  width: 120px;
+  height: auto;
+  transition: transform 0.1s;
+}
+
+main h1 {
+  text-align: center;
+  font-family: 'Zain', sans-serif;
+  font-size: 60px;
+  color: #A94649;
+  margin-top: 0px;
+  padding: 0 0px;
+  line-height: 1.2;
+}
+
+.between-main {
+  width: auto;
+  height: 13vh;
+  position: relative;
+  top: -45px;
+  left: 40vw;
+  transition: transform 0.1s;
+  z-index: 1;
+}
+
+.section2 {
+  width: 100%;
+  height: 90vh;
+  background-color: rgb(254, 247, 239);
+  margin-top: -85px;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+  position: relative;
+}
+
+.section2 h1 {
+  text-align: center;
+  font-family: 'Zain', sans-serif;
+  font-size: 40px;
+  color: #A94649;
+  margin-top: 0px;
+  line-height: 1;
+}
+
+.section2 p {
+  font-family: 'Alan Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #A94649;
+  max-width: 800px;
+  text-align: center;
+  line-height: 1.6;
+  letter-spacing: 3px;
+}
+
+.section3 {
+  width: 100%;
+  height: 150vh;
+  background: url('pink-bg.avif') repeat center;
+  background-repeat: repeat;
+  background-blend-mode: multiply;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -190px;
+  background-color: #f8adf6ef;
+}
+
+.videos {
+  display: flex;
+  gap: 50px;
+  margin-top: -600px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.videos video {
+  width: 25vw;
+  max-width: 250px;
+  height: 35vh;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  display: block;
+}
+
+.video1, .video2, .video3 {
+  position: relative; /* container for pseudo-element */
+  display: inline-block;
+}
+
+.video1::after {
+  content: 'Somethings You Love';
+  position: absolute;
+  top: 150px;
+  left: -50px;
+  width: 15vw;
+  height: auto;
+  pointer-events: none;
+  background: url('linee-1.avif');
+  background-repeat: no-repeat;
+  transform: rotate(30deg);
+  z-index: 2;
+  text-align: center;
+  font-family: 'Playwrite DE SAS', sans-serif;
+  font-size: 16px;
+  color: #A94649;
+  padding: 10px;
+}
+
+.video2::before {
+  content: 'Somethings You Love';
+  position: absolute;
+  top: 5px;
+  left: -60px;
+  width: auto;
+  max-width: 150px;
+  height: auto;
+  pointer-events: none;
+  background: url('linee-1.avif');
+  background-repeat: no-repeat;
+  transform: rotate(-30deg);
+  z-index: 2;
+  text-align: center;
+  font-family: 'Playwrite DE SAS', sans-serif;
+  font-size: 16px;
+  color: #A94649;
+  padding: 10px;
+  line-height: 13px;
+}
+
 @media (max-width: 768px) {
   .humburger-menu {
     display: block;
   }
-  nav  {
+
+  nav {
     display: none;
   }
-  
+
+  main {
+    height: 80vh;
+  }
+
+  .first1,
+  .first2 {
+    width: 70px;
+    height: auto;
+  }
+
+  .between-main {
+    height: 10vh;
+    top: -30px;
+  }
+}
+
+
+@media (max-width: 645px) {
+  main {
+    height: 100vh;
+    background: url('hero-bg-small.avif') no-repeat center center/cover;
+  }
+
+  .firstrow {
+    padding: 30px;
+    margin-bottom: -20px;
+  }
+
+  .secondrow {
+    padding: 30px;
+
+    margin-top: -20px;
+  }
+
+  main h1 {
+    font-size: 50px;
+  }
+
+  .first1,
+  .first2 {
+    width: 60px;
+    height: auto;
+  }
+
+  .section2 {
+    height: 60vh;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .videos {
+    margin-top: -200px;
+    overflow-x: auto;
+    overflow-y: hidden;     /* hides vertical scrollbar */
+  white-space: nowrap;    /* prevents wrapping */
+  scroll-snap-type: x mandatory; /* optional: snap effect */
+  -webkit-overflow-scrolling: touch;
+
+  justify-content: flex-start;
+  padding: 0 60px;
+  }
+  .videos::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+  }
+
+  .videos video {
+    width: 250px;
+    height: 200px;
+  }
+  .section3 {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 545px) {
+  .cd-nav-trigger {
+    left: 80%;
+  }
+
+  main h1 {
+    font-size: 40px;
+  }
+
+  .section2 h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .secondrow {
+    gap: 50%;
+  }
+
+  .first1,
+  .first2 {
+    width: 90px;
+    height: auto;
+  }
 }
