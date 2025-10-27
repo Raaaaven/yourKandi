@@ -1,1 +1,1 @@
-# Your kandi shop
+# Your kandi
